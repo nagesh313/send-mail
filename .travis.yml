@@ -3,6 +3,5 @@ jdk:
  - openjdk11
 deploy:
  provider: heroku
- api-key: 
-  secure: $HEROKU_API_KEY
+ api-key: $HEROKU_API_KEY
  app: service-send-mail
