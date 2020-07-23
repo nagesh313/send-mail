@@ -1,4 +1,4 @@
-package main.java.com.service.mail;
+package com.service.mail.api;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
@@ -10,11 +10,6 @@ import java.util.Properties;
 @CrossOrigin
 @RequestMapping("/api/SMTPController")
 public class SMTPController {
-    @GetMapping("/health")
-    public String health(@PathVariable String body) {
-        return "Ok";
-    }
-
     @GetMapping("/send/{body}")
     public void sendSimpleMessage(@PathVariable String body) {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
